@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:background="#fffc970b"
+                tools:context="com.jabespauya.stormy.MainActivity">
+
+    <TextView
+        android:id="@+id/temperatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="@android:color/white"
+        android:textSize="150sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/temperatureLabel"
+        android:layout_toRightOf="@+id/temperatureLabel"
+        app:srcCompat="@drawable/degree"/>
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/at_5_00_pm_it_will_be"
+        android:textColor="#80FFFFFF"
+        android:textSize="18sp"
+        android:layout_above="@+id/temperatureLabel"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timeLabel"
+        android:layout_marginBottom="60dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:text="Alcatraz Island,CA"/>
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/locationLabel"
+        android:layout_toLeftOf="@+id/temperatureLabel"
+        android:layout_toStartOf="@+id/temperatureLabel"
+        app:srcCompat="@drawable/cloudy_night"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/humidityLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Humidity"
+                android:textColor="#80ffffff"/>
+
+            <TextView
+                android:id="@+id/humidityValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0.88"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/precipLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Rain/Snow"
+                android:textColor="#80FFFFFF"/>
+
+            <TextView
+                android:id="@+id/precipValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="100%"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/summaryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Stormy with a chance of meatballs"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:textSize="18dp"
+        android:layout_below="@+id/linearLayout"/>
+
+    <ImageView
+        android:id="@+id/refreshView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/refresh"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/refreshView"
+        android:layout_alignEnd="@+id/refreshView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp">
+
+        <Button
+            android:id="@+id/btnHourly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:text="Hourly"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/btnDaily"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#40ffffff"
+            android:text="Daily"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+</RelativeLayout>

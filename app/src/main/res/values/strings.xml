@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Stormy</string>
+    <string name="no_connection">No Connection</string>
+    <string name="error_message">Error occur. Please try again!</string>
+    <string name="ok_button">Ok</string>
+    <string name="at_5_00_pm_it_will_be">At 5:00 PM it will be</string>
+    <string name="error_dialog">error_dialog</string>
+</resources>
